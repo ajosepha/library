@@ -103,7 +103,7 @@ describe 'Library' do
 
   it "returns an error if the book cannot be found" do
     @library.add_to_library(@book)
-    expect {@library.find_by_title('Murder She Wrote')}.to raise_error("Can't find Murder She Wrote")
+    expect {@library.find_by_title('Murder She Wrote')}.to raise_error("Can't find \"Murder She Wrote\"")
   end
 
   it "reads a book" do
@@ -111,10 +111,10 @@ describe 'Library' do
     expect(@library.read_book("The Grapes of Wrath")).to be true
   end
 
-  it "tells you if you have already read a book" do
+  it "raises an error if you try to add the same book twice" do
     @library.add_to_library(@book)
     @library.read_book("The Grapes of Wrath")
-    expect {@library.read_book("The Grapes of Wrath")}.to raise_error("You have already read The Grapes of Wrath")
+    expect {@library.read_book("The Grapes of Wrath")}.to raise_error("You have already read \"The Grapes of Wrath\"")
   end
 
   it "shows you all the books in the library" do

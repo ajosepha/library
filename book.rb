@@ -8,7 +8,6 @@ class Book
   end
  
   def read!
-    raise "You have already read #{@title}" if read?
     @read = true
   end
  

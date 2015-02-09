@@ -24,13 +24,13 @@ class Library
 
   def find_by_title(title)
     book = @all_books.find{|book| book.title == title}
-    raise "Can't find #{title}" if !book
+    raise "Can't find \"#{title}\"" if !book
     book
   end
  
   def read_book(title)
     book = find_by_title(title)
-    raise "You have already read #{title}" if book.read
+    raise "You have already read \"#{title}\"" if book.read
     book.read!
   end
  

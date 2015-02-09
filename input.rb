@@ -40,7 +40,7 @@ class UserInterface
         control_panel
       end
     rescue
-      puts "Sorry, I didn't get that"
+      puts "Sorry, I didn't get that. Type help if you would like assistance!"
       control_panel
     end
   end
