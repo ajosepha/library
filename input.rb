@@ -36,7 +36,7 @@ class UserInterface
       elsif input =="quit"
         puts "Bye!"
       else
-        puts "I didn't get that, please try again!"
+        puts "I didn't get that, please try again.  Type help if you would like assistance!"
         control_panel
       end
     rescue

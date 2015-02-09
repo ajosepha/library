@@ -1,6 +1,5 @@
 require 'rspec'
 require_relative 'library.rb'
-# require_relative 'input.rb'
 
 RSpec.configure do |config|
   # Use color in STDOUT
